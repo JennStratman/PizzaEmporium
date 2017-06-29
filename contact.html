@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Pizza Emporium Contact</title>
+       <meta name="author" content="Jennifer Stratman" />
+       <meta name="keywords" content="final project 'Pizza Store', based on wireframe" />
+       <meta name="description" content="This is a mock Pizza Store for final project in CIS242." />
+       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+       <meta name="robots" content="none" />
+	   <link rel="stylesheet" href="css/reset.css" type="text/css" />
+	   <link rel="stylesheet" href="css/pizzaStyle.css" type="text/css" />
+		<script type="text/javascript" src="js/test.js"></script>
+	   <script type="text/javascript" src="js/cookies.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="graphics/bananaAnchovyPizza.jpg" width="238" height="120" alt="picture of banana anchovy pizza">
+    <h1>Pizza Emporium</h1>
+    <div class="address">1234 Somewhere Street<br />
+		     Anytown, WA 98036<br />
+		     555.987.1234
+	</div>
+  </header>
+
+  <div class="wrapper">
+    <nav class="linkhead" id="navLink">
+      <a href="home.html" class="orderSum">Home</a><br />
+      <a href="contact.html" class="orderSum">Contact Us</a><br />
+      <a href="order.html" class="orderSum">Order Now</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+  </nav>
+
+  <main id="contactArticle">
+    <h2 id="intro">Questions? Comments? We would love to hear from you. Give us a call or fill out the form below.</h2>
+    <form action="mailto:jennstratman@gmail.com?subject=Website query" method="post" enctype="text/plain">
+<!-- USED FOR TESTING PURPOSES
+	
+	Name: <input type="text" name="name"><br />
+	Email: <input type="text" name="email"><br />
+	Comments: <br />
+	<input type="text" name="comments" size="50"><br /><br />
+	<input type="submit" value="Send">
+	<input type="reset" value="Reset">
+-->
+     Make sure to complete all fields marked with an asterix (*) if you would like a response. (We need to know how to reach you).
+      <fieldset>
+        <legend>Your contact information*</legend>
+        <div>Name: <input type="text" size="30" name="txtNameFeedback"></div>
+        <div>Email: <input type="text" size="30" name="txtEmail"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Background information</legend>
+        <div>How did you find our site?
+        <select name="selectFind">
+          <option>Bob Dole told me</option>
+          <option>I found a chicken and it led me here</option>
+          <option>Purely an accident</option>
+          <option>I am a stalker</option>
+        </select>
+      </div>
+      <div>
+        Are you a current customer?
+        <input type="radio" name="currentCust" value="Y" checked/>Yes
+        <input type="radio" name="currentCust" value="N"/>No
+      </div>
+      </fieldset>
+	  <fieldset>
+	  <legend>Comments <span style='font-size: 0.7em'>(max 256 characters)</span></legend>
+	  <textarea cols='45' rows='9' maxlength='256' name="txtComments" placeholder="We'd love to hear from you. Please provide your feedback here."></textarea>
+	  </fieldset>
+  
+	  <input type="submit" name="feedbackSubmit" value="Submit your Feedback" />
+	  <input type="reset" value="Reset" />
+	
+    </form>
+  </main>
+
+  </div>
+</body>
+</html>

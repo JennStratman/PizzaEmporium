@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Customer Information</title>
+    <meta name="author" content="Jennifer Stratman" />
+    <meta name="keywords" content="final project 'Pizza Store', based on wireframe - codeFellows 201 project based on EDCC CIS242 final project" />
+    <meta name="description" content="This is based on my final project for CIS242." />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="none" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/pizzaStyle.css" type="text/css" />
+	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+</head>
+<body>
+  <header>
+    <img src="graphics/bananaAnchovyPizza.jpg" width="238" height="120" alt="picture of banana anchovy pizza">
+    <h1>Pizza Emporium</h1>
+    <div class="address">1234 Somewhere Street<br />
+		     Anytown, WA 98036<br />
+		     555.987.1234
+	</div>
+  </header>
+
+  <div class="wrapper">
+    <nav class="linkhead" id="navLink">
+      <a href="home.html" class="orderSum">Home</a><br />
+      <a href="contact.html" class="orderSum">Contact Us</a><br />
+      <a href="order.html" class="orderSum">Order Now</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+    </nav>
+    <main id="customerArticle">
+      <div class="cookieDisplay">
+        <div class="travelDescription">
+          Your current
+          <script type="text/javascript">
+            document.write(GetCookie("PizzaDesc"));
+          </script>
+        </div>
+
+        <div class="priceSummary">
+          <script type="text/javascript">
+            document.write(GetCookie("PriceSum"));
+          </script>
+        </div>
+      </div>
+      <h3>Delivery Information <span style="font-size:x-small">(* required information)</span></h3>
+      <div class="entryForm">
+          <form action="summary.html" method="get" id="customerForm" onsubmit="return chForm();" class="cmxform">
+          <div id="firstName">
+		  <label>First Name: *</label>
+          <input type="text" name="txtFName" onchange="return clearThis()"/>
+          <div id="txtFName"></div>
+		  </div>
+          
+		  <div id="lastName">
+		  <label>Last Name: *</label>
+          <input type="text" name="txtLName" onchange="return clearThis()"/>
+          <div id="txtLName"></div>
+		  </div>
+		  
+		  <div id="Email">
+          <label>Email: *</label>
+          <input type="text" name="txtEmail" onchange="return clearThis()"/>
+          <div id="txtEmail"></div>
+		  </div>
+		  
+		  <div id="Address">
+          <label>Address: *</label>
+          <input type="text" name="txtAddress"  onchange="return clearThis()" />
+          <div id="txtAddress"></div>
+
+          <label>Apartment:</label>
+          <input type="text" name="txtApartment" />
+          <div id="txtApartment"></div>
+		  </div>
+		  
+		  <div id="cityStateZip">
+          <label>City, State Zip: *</label>
+          <input type="text" name="txtCity" onchange="return clearThis()" />
+          <input type="text" name="txtState" size="1" maxlength="2"  onchange="return clearThis()" />
+          <input type="text" name="txtZip" size="6" maxlength="5" onchange="return clearThis()" />
+          <div id="txtCity"></div>
+          <div id="txtState"></div>
+          <div id="txtZip"></div>
+		  </div>
+		  
+		  <div id="Zip">
+          <label>Phone: * (XXX-XXX-XXXX)</label>
+          <input type="text" name="txtPhone" onchange="return clearThis()" />
+          <div id="txtPhone"></div>
+		  </div>
+		  
+          <input type="submit" name="cmdSubmit" value="Order your Pizza" />
+
+        </form>
+      </div>
+    </main>
+  </div>
+
+
+</body>
+
+</html> 

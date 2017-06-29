@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pizza Order Summary</title>
+    <meta name="author" content="Jennifer Stratman" />
+    <meta name="keywords" content="final project 'Pizza Store', based on wireframe - codeFellows 201 project based on EDCC CIS242 final project" />
+    <meta name="description" content="This is based on my final project for CIS242." />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="none" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/pizzaStyle.css" type="text/css" />
+	<script type="text/javascript" src="js/test.js"></script>
+	<script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+</head>
+<body onLoad="secondPassed()">
+
+  <header>
+    <img src="graphics/bananaAnchovyPizza.jpg" width="238" height="120" alt="picture of banana anchovy pizza">
+    <h1>Pizza Emporium</h1>
+    <div class="address">1234 Somewhere Street<br />
+		     Anytown, WA 98036<br />
+		     555.987.1234
+	</div>
+  </header>
+
+  <div class="wrapper">
+    <nav class="linkhead" id="navLink">
+      <a href="home.html" class="orderSum">Home</a><br />
+      <a href="contact.html" class="orderSum">Contact Us</a><br />
+      <a href="order.html" class="orderSum">Order Now</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+    </nav>
+
+    <main id="summaryArticle">
+      <h2>Thank you for ordering from Pizza Emporium</h2>
+      <div>
+      <p>Your order will be delivered to you within</p><p id="countdown" class="timer"></p>
+
+      <p>Your pizza will be delivered to:</p>
+
+      <script type="text/javascript">
+      <!--
+      //<![CDATA[
+
+		document.write(GetCookie("custName") + "<br />");
+		document.write(GetCookie("custAddress") + "<br />");
+		document.write(GetCookie("custCity") + "<br />");
+
+      //]]>
+      //-->
+      </script>
+      <p>The pizza you ordered:
+      <script type="text/javascript">
+
+      document.write(GetCookie("PizzaDesc"));
+
+
+      </script>
+      <p>The final price for your pizza is:</p>
+
+      <p>
+      <script type="text/javascript">
+      <!--
+      //<![CDATA[
+
+      document.write(GetCookie("PriceSum"));
+
+      //]]>
+      //-->
+      </script></p></div>
+    </main>
+  </div>	
+	
+</body>
+</html>

@@ -1,0 +1,433 @@
+/* ----------------------------------------------------------------
+General stylesheet
+-----------------------------------------------------------------*/
+body {
+  background-clip: border-box; 
+  background-color: #8f0000;
+  color: #ffbf00;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;    
+}
+
+header {
+  background-color: #333;
+/*  color: #ffbf00; */
+  display: flex;
+  position: absolute;
+  width: 100%;  
+}
+
+h1 {
+  bottom: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  top: 50%;  
+  width: 80%;  
+}
+
+h2 {
+  color: rgb(255, 217, 24);
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;  
+  text-align: center;
+}
+
+h3 {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;  
+}
+
+img {
+	border: 0;
+}
+
+#txtFName, #txtLName, #txtEmail, #txtAddress, #txtApartment, #txtCity, #txtState, #txtZip, #txtPhone {
+  color:white;
+  display: inline;  
+  font-size: smaller;
+  font-weight:bold;  
+}
+
+.home {
+	flex-direction: column;
+}
+
+main p {
+  line-height: 24px;
+  padding: 10px 0;   
+}
+
+#intro {
+  display: flex;
+  position: relative;
+  z-index: -1;
+}
+
+legend {
+  display: block;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+fieldset {
+  border: 1px solid white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.address {
+  display: inline;
+  font-size: 12px;
+  float: right;
+  padding: 10px;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  top: 125px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.info_block {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+}
+
+#options {
+	display: flex;
+	flex-direction: row;
+}
+
+.selections {
+  border: 1px solid white;
+}
+
+input, select {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+  padding: 20px 10px;
+}
+
+nav {
+  box-sizing: border-box;
+  clear: both;
+  float: left;
+  padding: 10px;
+  position: relative;
+  width: 15%;
+}
+
+nav a {
+  background-color: #444;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #cf7600;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px #cf7600;   
+}
+
+nav a:hover {
+  background-color: #ffbf00;
+  color: #444;
+}
+
+main {
+  display: flex;
+  margin: 10px auto;
+  padding: 10px;
+
+}
+
+#customerArticle, #summaryArticle {
+  align-content: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+#contactArticle {
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  background-color: rgba(68,68,68,0.3);
+  box-sizing: border-box;
+  float: right;
+  margin: 15px 0 0 0;
+  padding: 10px;
+  position: relative;
+  width: 25%;  
+}
+
+.cookieDisplay {
+  align-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px rgb(210, 118, 105);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;  
+  padding: 10px;
+  position: relative;
+  width: 100%;    
+}
+
+.travelDescription {
+  margin-right: 50px;
+}
+
+.travelDescription, .priceSummary {
+  display: flex;
+}
+
+.entryForm {
+  border: 1px solid white;
+  clear: both;
+  display: flex;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.entryForm label {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 20px 20px 0;
+  padding: 20px 10px;
+}
+
+.orderSum, .icon {
+  color: #ffbf00;
+}
+
+.options {
+  visibility: hidden;
+}
+
+.buildLabel {
+	margin-bottom: 10px;
+}
+
+input[type=button], input[type=submit], input[type=reset], button { 
+  border: 1px solid #888;
+  background-color: #dfdfdf;
+  border-radius: 5px;  
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 4px auto;
+  padding: 10px;
+  text-decoration: none;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button:hover {
+  background-color: #efefef;
+}
+
+.icon {
+  display: none;
+}
+
+/*-----------------------------------------------------
+Styles for Tables
+-----------------------------------------------------*/
+th, td {
+  margin: 10px;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.table-summary {
+  border-top-color: #fff;
+  -moz-border-top-colors: #fff;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+/*-----------------------------------------------------
+Responsive design - styles for smaller screens
+-----------------------------------------------------*/
+@media only screen and (max-width: 865px) {
+
+	.wrapper {
+	  display: -webkit-flex;
+      display: flex;
+	  flex-direction: column;
+      -webkit-align-content: center;
+      align-content: center;
+	}
+
+	nav {
+	  align-items: center;
+	  box-sizing: border-box;
+	  clear: both;
+	  display: flex;
+	  flex-direction: row;
+	  order: 0;
+	  padding: 10px;
+	  position: absolute;
+	}
+
+	nav a {
+	  align-content: center;
+	  display: flex;
+	  flex-direction: row;
+	  margin: 10px auto;
+	  padding: 10px;
+	}
+
+	main {
+	  clear: none;
+	  margin-top: 75px;
+	}
+
+	aside {
+      align-items: space-between;
+	}
+
+	#priceSum {
+	  margin-left: auto;
+  }
+
+	main, aside, nav {
+      display: flex;
+	  width: 100%;
+	}
+
+	.selections, .specialty {
+	  align-items: center !important;
+      display: flex !important;
+	  flex-flow: row wrap;
+	  max-width: 520px;
+	}
+	
+	#customerArticle, #summaryArticle  {
+		max-width: 450px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+  header img {
+	margin: auto;
+  }
+  
+  .address {
+	  text-align: center !important;
+  }
+  
+  header {
+	  flex-direction: column;
+  }
+  
+  .buildLabel {
+	display: flex;
+	}
+
+  label {
+	margin: 10px;
+	padding: 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    z-index: 0;
+  }
+  .wrapper {
+	margin: auto !important;
+	max-width: 570px !important;
+	min-width: 220px !important;
+    top: 225px !important;
+	width: 100% !important;
+  }
+
+  main {
+    padding: 0 5px;
+  }
+
+  nav a:not(:first-child) {
+    display: none;
+  }
+
+  nav a.icon {
+	  display: block;
+    float: right;
+  }
+
+  nav.responsive {
+	display: flex;
+	flex-direction: column;
+	background-color: #8f0000;
+	opacity: 0.95;
+    z-index: 100;
+	top: 20px;
+  }
+
+  nav.responsive a.icon {
+    position: absolute;
+	right: 0;
+	top: 0;
+  }
+
+  nav.responsive a {
+	display: block;
+    float: none;
+    margin: 0;
+	opacity: 1;
+	text-align: left;
+    z-index: 100;
+  }
+  
+  #customerArticle, #summaryArticle  {
+	max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .info_block {
+	flex-direction: column !important;
+  }
+  
+  .specialty {
+	  align-items: left !important;
+  }
+  
+  .selections {
+	  max-width: 320px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  header img {
+	  display: none;
+  }
+
+  .wrapper {
+    top: 125px !important;
+  }
+}

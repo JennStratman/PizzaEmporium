@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Pizza Order</title>
+    <meta name="author" content="Jennifer Stratman" />
+    <meta name="keywords" content="final project 'Pizza Store', based on wireframe - codeFellows 201 project based on EDCC CIS242 final project" />
+    <meta name="description" content="This is based on my final project for CIS242." />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="none" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/pizzaStyle.css" type="text/css" />
+	<script type="text/javascript" src="js/test.js"></script>
+	<script type="text/javascript" src="js/cookies.js"></script>
+</head>
+<body>
+  <header>
+    <img src="graphics/bananaAnchovyPizza.jpg" width="238" height="120" alt="picture of banana anchovy pizza">
+	<h1>Pizza Emporium</h1>
+    <div class="address">1234 Somewhere Street<br />
+		     Anytown, WA 98036<br />
+		     555.987.1234
+	</div>
+  </header>
+  
+  <div class="wrapper">
+    <nav class="linkhead" id="navLink">
+      <a href="home.html" class="orderSum">Home</a><br />
+      <a href="contact.html" class="orderSum">Contact Us</a><br />
+      <a href="order.html" class="orderSum">Order Now</a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+    </nav>
+	
+  <main>
+    <form>
+		<label>Select your pizza size:</label>
+		<div class="info_block">
+			<div><input type="radio" name="rdoSize" value="1" onclick="return orderSummary()" /> Personal (10")<br /></div>
+			<div><input type="radio" name="rdoSize" value="2" checked="checked" onclick="return orderSummary()" /> Medium (12")<br /></div>
+			<div><input type="radio" name="rdoSize" value="3" onclick="return orderSummary()" /> Large (16")<br /></div>
+		</div>
+
+		<label>Select your crust type:</label>
+		<div class="info_block">
+			<div><input type="radio" name="rdoCrust" value="ht" checked="checked" onclick="return orderSummary()" /> Hand Tossed<br /></div>
+			<div><input type="radio" name="rdoCrust" value="dd"  onclick="return orderSummary()" /> Pan<br /></div>
+			<div><input type="radio" name="rdoCrust" value="dd"  onclick="return orderSummary()" /> Stuffed Crust<br /></div>
+		</div>	
+	  
+		<div class="selections">
+			<div class="buildLabel">
+				<label>Build your own</label>
+				<input type="radio" name="rdoType" value="build" checked="checked" onclick="return changeOption();"/>
+			</div>
+			<div class="info_block" id="options">
+				<div class="left-left">
+						<input type="checkbox" value="Chicken" name="chkOption" onclick="return orderSummary()"> Chicken <br />
+						<input type="checkbox" value="Ham" name="chkOption" onclick="return orderSummary()"> Ham <br />
+						<input type="checkbox" value="Steak" name="chkOption" onclick="return orderSummary()"> Steak <br />
+				</div>
+				<div class="left_center">
+						<input type="checkbox" value="Anchovies" name="chkOption" onclick="return orderSummary()"> Anchovies <br />
+						<input type="checkbox" value="Salmon" name="chkOption" onclick="return orderSummary()"> Salmon <br />
+						<input type="checkbox" value="Algae" name="chkOption" onclick="return orderSummary()"> Algae <br />
+				</div>
+				<div class="right-center">
+						<input type="checkbox" value="Pineapple" name="chkOption" onclick="return orderSummary()"> Pineapple <br />
+						<input type="checkbox" value="Banana" name="chkOption" onclick="return orderSummary()"> Banana <br />
+						<input type="checkbox" value="Avocado" name="chkOption" onclick="return orderSummary()"> Avocado <br />
+				</div>
+				<div class="right_right">
+						<input type="checkbox" value="Black Olives" name="chkOption" onclick="return orderSummary()"> Black Olives <br />
+						<input type="checkbox" value="Mushrooms" name="chkOption" onclick="return orderSummary()"> Mushrooms <br />
+						<input type="checkbox" value="Green Olives" name="chkOption" onclick="return orderSummary()"> Green Olives <br />
+				</div>
+			</div>
+			<label>Or select from one of our specialty pizzas</label>
+			<div class="info_block specialty">
+				<div><input type="radio" name="rdoType" value="meat" onclick="return hideOption();" /> Meat Lover's<br /></div>
+				<div><input type="radio" name="rdoType" value="sea" onclick="return hideOption();" /> Under The Sea<br /></div>
+				<div><input type="radio" name="rdoType" value="veg" onclick="return hideOption();" /> Vegetarian<br /></div>
+			</div>
+		</div>
+       <input type="button" onclick="return writePizzaCookies()" value="Submit Your Order">
+    </form>
+  </main>
+  <aside>
+	<div class="orderSum" id="orderSum" style="height: 250px;">Order Summary: <br /><br />Medium (12") Hand Tossed<br />Build your own with:<br /></div>
+    <br /><br /><br />
+    <div id="priceSum">
+		<p>Subtotal: $13.25</p>
+		<p style="border-bottom-color: White; border-bottom-width: 1px; border-bottom-style: solid;">Tax: 1.26</p>
+		<p>Total: $14.51</p>
+     </div>
+  </aside>
+  <script type="text/javascript">
+	<!--
+	//<![CDATA[
+	document.forms[0].reset();
+	orderSummary();
+	//]]>
+	//-->
+  </script>
+  </div>
+</body>
+</html>
